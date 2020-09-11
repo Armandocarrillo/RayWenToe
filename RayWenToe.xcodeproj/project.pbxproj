@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10F654D4250B4B1B008018C8 /* MoveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F654D3250B4B1B008018C8 /* MoveCommand.swift */; };
 		421087F4205EDFAC00206D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421087F3205EDFAC00206D65 /* AppDelegate.swift */; };
 		421087F6205EDFAC00206D65 /* GameplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421087F5205EDFAC00206D65 /* GameplayViewController.swift */; };
 		421087F9205EDFAC00206D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421087F7205EDFAC00206D65 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10F654D3250B4B1B008018C8 /* MoveCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCommand.swift; sourceTree = "<group>"; };
 		421087F0205EDFAB00206D65 /* RayWenToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayWenToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421087F3205EDFAC00206D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421087F5205EDFAC00206D65 /* GameplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				427D60FE20605F7400C31416 /* GameManager.swift */,
 				4234CD3C2061C88F00C24B80 /* Referee.swift */,
 				428B820D206301FD00E26C30 /* States */,
+				10F654D3250B4B1B008018C8 /* MoveCommand.swift */,
 			);
 			path = GameManager;
 			sourceTree = "<group>";
@@ -271,12 +274,12 @@
 				TargetAttributes = {
 					421087EF205EDFAB00206D65 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1170;
 						ProvisioningStyle = Automatic;
 					};
 					428B821C206329B200E26C30 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1170;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 421087EF205EDFAB00206D65;
 					};
@@ -344,6 +347,7 @@
 				42BBABBF2060B7320004A9B3 /* Gameboard.swift in Sources */,
 				42C1D36B20605C9600A58707 /* Copying.swift in Sources */,
 				4223CC6A20603EA80061DD1E /* XView.swift in Sources */,
+				10F654D4250B4B1B008018C8 /* MoveCommand.swift in Sources */,
 				421087F4205EDFAC00206D65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,11 +509,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMTQUL7LT8;
 				INFOPLIST_FILE = "$(SRCROOT)/RayWenToe/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.armandocarrillo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -522,11 +527,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMTQUL7LT8;
 				INFOPLIST_FILE = "$(SRCROOT)/RayWenToe/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.armandocarrillo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -542,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RayWenToeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayWenToe.app/RayWenToe";
 			};
@@ -558,7 +564,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RayWenToeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RayWenToe.app/RayWenToe";
 			};

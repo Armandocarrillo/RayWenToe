@@ -1,30 +1,3 @@
-/// Copyright (c) 2018 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
 
 import Foundation
 
@@ -34,6 +7,9 @@ public class GameManager {
   public weak var gameplayView: GameplayView! {
     didSet { gameboard = Gameboard(size: gameplayView.gameboardView.boardSize) }
   }
+  
+  internal lazy var movesForPlayer = [player1: [MoveCommand](), player2: [MoveCommand]()]
+  
   public let player1: Player
   public let player2: Player
   public private(set) var gameboard: Gameboard!
@@ -51,6 +27,7 @@ public class GameManager {
   }
 
   // MARK: - Object Lifecycle
+  //Class constructor
   public class func onePlayerMode() -> GameManager {
     let player1 = Player(markView: XView(), turnMessage: "Your Turn", winMessage: "You Win!")
     let player2 = Player(markView: OView(), turnMessage: "Computer's Turn", winMessage: "You Lose :[")
@@ -87,7 +64,7 @@ public class GameManager {
     gameboard.clear()
     gameplayView.gameboardView.clear()
 
-    // TODO: - Reset movesForPlayers
+    movesForPlayer = [player1: [], player2: []]
 
     currentStateIndex = 0
     currentState.begin()
